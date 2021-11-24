@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AqwasTask.iml" filepath="$PROJECT_DIR$/.idea/modules/AqwasTask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AqwasTask.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AqwasTask.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TrendingTask.iml" filepath="$PROJECT_DIR$/.idea/modules/TrendingTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TrendingTask.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TrendingTask.app.iml" />
     </modules>
   </component>
 </project>

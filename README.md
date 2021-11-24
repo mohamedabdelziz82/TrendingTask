@@ -7,4 +7,4 @@ The following diagram shows the structure of this project with 3 layers:
 - Domain
 - Data
 
-![image](https://raw.githubusercontent.com/mohamedabdelziz82/AqwasTask/master/diagram.png?raw=true)
+![image](https://raw.githubusercontent.com/mohamedabdelziz82/TrendingTask/master/diagram.png?raw=true)
