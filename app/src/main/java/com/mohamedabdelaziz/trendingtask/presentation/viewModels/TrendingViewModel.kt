@@ -3,7 +3,7 @@ package com.mohamedabdelaziz.trendingtask.presentation.viewModels
 import android.util.Log
 
 import com.mohamedabdelaziz.trendingtask.data.repository.TrendingRepositoryRemoteImp
-import com.mohamedabdelaziz.trendingtask.trendinghome.data.repository.TrendingRepositoryLocalImp
+import com.mohamedabdelaziz.trendingtask.data.repository.TrendingRepositoryLocalImp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.MutableLiveData
 import com.mohamedabdelaziz.trendingtask.domain.entities.TrendingResponse

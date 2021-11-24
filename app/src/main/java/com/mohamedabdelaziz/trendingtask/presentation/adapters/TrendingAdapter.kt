@@ -55,7 +55,7 @@ class TrendingAdapter(private val context: Context) : RecyclerView.Adapter<Trend
     }
 
     override fun getItemCount(): Int {
-        return if (trendingList != null) trendingList!!.size else 0
+        return trendingList.size
     }
 
     fun setList(trendingList: List<TrendingResponse>) {
@@ -65,24 +65,5 @@ class TrendingAdapter(private val context: Context) : RecyclerView.Adapter<Trend
 
     class TrendingHolder(var trendingItemBinding: TrendingItemBinding) : RecyclerView.ViewHolder(trendingItemBinding.root)
 
-    fun clear() {
-        trendingList.clear()
-        while (itemCount > 0) {
-            remove(getItem(0))
-            notifyDataSetChanged()
-        }
-        notifyDataSetChanged()
-    }
 
-    private fun remove(trendingResponse: TrendingResponse) {
-        val position = trendingList.indexOf(trendingResponse)
-        if (position > -1) {
-            trendingList.removeAt(position)
-            notifyItemRemoved(position)
-        }
-    }
-
-    private fun getItem(position: Int): TrendingResponse {
-        return trendingList[position]
-    }
 }

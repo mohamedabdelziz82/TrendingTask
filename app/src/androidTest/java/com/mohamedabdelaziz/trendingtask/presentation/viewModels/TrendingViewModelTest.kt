@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import com.mohamedabdelaziz.trendingtask.data.repository.TrendingRepositoryRemoteImp
-import com.mohamedabdelaziz.trendingtask.trendinghome.data.repository.TrendingRepositoryLocalImp
+import com.mohamedabdelaziz.trendingtask.data.repository.TrendingRepositoryLocalImp
 import com.mohamedabdelaziz.trendingtask.domain.entities.TrendingResponse
 import org.junit.Assert
 import org.junit.Before

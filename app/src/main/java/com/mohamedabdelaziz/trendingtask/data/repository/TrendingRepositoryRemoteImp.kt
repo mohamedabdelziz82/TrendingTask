@@ -8,7 +8,7 @@ import io.reactivex.rxjava3.core.Single
 
 /**
  * This repository is responsible for
- * fetching data from server or db
+ * fetching data from server
  */
 class TrendingRepositoryRemoteImp @Inject constructor(private val apiService: ApiService) : TrendingRepositoryRemote {
        override fun getTrendingList(): Single<List<TrendingResponse>> = apiService.getApiTrendingRepositoriesList()

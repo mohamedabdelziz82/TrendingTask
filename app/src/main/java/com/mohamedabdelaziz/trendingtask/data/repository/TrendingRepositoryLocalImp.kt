@@ -1,4 +1,4 @@
-package com.mohamedabdelaziz.trendingtask.trendinghome.data.repository
+package com.mohamedabdelaziz.trendingtask.data.repository
 
 
 import javax.inject.Inject
@@ -9,7 +9,7 @@ import androidx.lifecycle.LiveData
 
 /**
  * This repository is responsible for
- * fetching data from server or db
+ * fetching data from db
  */
 class TrendingRepositoryLocalImp @Inject constructor(private val trendingDao: TrendingDao) :
     TrendingRepositoryLocal {

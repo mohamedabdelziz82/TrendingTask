@@ -46,6 +46,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onConnectionSuccess() {
+        visibleNoInternet()
         isConnectedForMenu = true
         visibleTrendRecyclerView()
     }
@@ -78,15 +79,15 @@ class MainActivity : BaseActivity() {
      private fun getTrendingDataRemote(sortType: Int) {
         binding?.shimmerLayout?.startShimmer()
         trendingViewModel.getTrendingListRemote()
-        trendingViewModel.trendingResponseMutableLiveData?.observe(this, { trendingList: List<TrendingResponse> ->
+        trendingViewModel.trendingResponseMutableLiveData.observe(this, { trendingList: List<TrendingResponse> ->
             when (sortType) {
                 ConstantSort.DEFAULT_SORT -> trendingAdapter?.setList(trendingList)
                 ConstantSort.SORT_NAME -> {
-                    val sortedWithName = trendingList?.sortedWith(compareBy({ it?.name }, { it?.name }))
+                    val sortedWithName = trendingList.sortedWith(compareBy({ it.name }, { it.name }))
                     trendingAdapter?.setList(sortedWithName)
                 }
                 ConstantSort.SORT_STAR -> {
-                    val sortedWithStars = trendingList?.sortedWith(compareBy({ it?.stars }, { it?.stars }))
+                    val sortedWithStars = trendingList.sortedWith(compareBy({ it.stars }, { it.stars }))
                     trendingAdapter?.setList(sortedWithStars )
                 }
             }
@@ -96,18 +97,17 @@ class MainActivity : BaseActivity() {
     }
 
      private fun getTrendingDataLocal(sortType: Int) {
-        trendingAdapter?.clear()
         binding?.shimmerLayout?.startShimmer()
         trendingViewModel.getTrendingListLocal()
-        trendingViewModel.getTrendingListLocal()?.observe(this, { trendingList: List<TrendingResponse> ->
+        trendingViewModel.getTrendingListLocal().observe(this, { trendingList: List<TrendingResponse> ->
             when (sortType) {
                 ConstantSort.DEFAULT_SORT -> trendingAdapter?.setList(trendingList )
                 ConstantSort.SORT_NAME -> {
-                     val sortedWithName = trendingList?.sortedWith(compareBy({ it?.name }, { it?.name }))
+                     val sortedWithName = trendingList.sortedWith(compareBy({ it.name }, { it.name }))
                     trendingAdapter!!.setList(sortedWithName )
                 }
                 ConstantSort.SORT_STAR -> {
-                    val sortedWithStars = trendingList?.sortedWith(compareBy({ it?.stars }, { it?.stars }))
+                    val sortedWithStars = trendingList.sortedWith(compareBy({ it.stars }, { it.stars }))
                     trendingAdapter!!.setList(sortedWithStars )
                 }
             }

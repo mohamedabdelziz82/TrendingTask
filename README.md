@@ -1,4 +1,4 @@
-# AqwasTask
+# TrendingTask
 I used the following technologies to make that task :
 ## MVVM, Hilt, RXJava3, Retrofit, ViewModel, LiveData, Data Binding, Room, ConstraintLayout, Glide, gson, ToolBar, and Solid principles.
 # Implemented by Clean Architecture

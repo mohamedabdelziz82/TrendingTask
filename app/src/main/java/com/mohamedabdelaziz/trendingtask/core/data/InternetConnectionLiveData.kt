@@ -8,7 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.NetworkInfo
 
-class InternetConnectionLiveData(var context: Context) : LiveData<Boolean?>() {
+class InternetConnectionLiveData(private var context: Context) : LiveData<Boolean?>() {
     override fun onActive() {
         super.onActive()
         val filter = IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)

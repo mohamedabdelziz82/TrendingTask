@@ -5,7 +5,7 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 import com.mohamedabdelaziz.trendingtask.data.datasource.local.dao.TrendingDao
 import com.mohamedabdelaziz.trendingtask.domain.repository.TrendingRepositoryLocal
-import com.mohamedabdelaziz.trendingtask.trendinghome.data.repository.TrendingRepositoryLocalImp
+import com.mohamedabdelaziz.trendingtask.data.repository.TrendingRepositoryLocalImp
 import android.app.Application
 import com.mohamedabdelaziz.trendingtask.data.datasource.local.TrendingDataBase
 import androidx.room.Room

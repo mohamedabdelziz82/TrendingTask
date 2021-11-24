@@ -2,7 +2,6 @@ package com.mohamedabdelaziz.trendingtask.core.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import com.mohamedabdelaziz.trendingtask.core.data.InternetConnectionLiveData
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private fun observeNetworkState() {
-        connectionLiveData!!.observe(this, Observer {
+        connectionLiveData!!.observe(this, {
             if (it!!) {
                 onConnectionSuccess()
             } else {
